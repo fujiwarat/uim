@@ -145,11 +145,11 @@ if test "x$with_anthy_utf8" != xno; then
                     [with_anthy_utf8=yes
                      AC_DEFINE(LIBANTHY_UTF8_CAPABLE, 1,
                      [libanthy-unicode can handle UTF-8])],
-                    [PKG_CHECK_MODULES(ANTHY_UTF8, anthy >= 8622,
-                                       [with_anthy_utf8=yes
-                                        AC_DEFINE(LIBANTHY_UTF8_CAPABLE, 1,
-                                        [libanthy can handle UTF-8])],
-                                       with_anthy_utf8=no)])
+                     [PKG_CHECK_MODULES(ANTHY_UTF8, anthy >= 8622,
+                                        [with_anthy_utf8=yes
+                                         AC_DEFINE(LIBANTHY_UTF8_CAPABLE, 1,
+                                         [libanthy can handle UTF-8])],
+                                         with_anthy_utf8=no)])
 fi
 
 AM_CONDITIONAL(ANTHY_UTF8, test "x$with_anthy_utf8" = xyes)
